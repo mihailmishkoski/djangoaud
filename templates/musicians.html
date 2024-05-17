@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for m in musicians %}
+            <h3>{{m.first_name}} {{m.last_name}}</h3>
+            {{m.instrument}} <br/>
+        {% endfor %}
+    <br>
+    <form action="/add_musician" method="get">
+
+        <input type="submit" value="Add new musician">
+    </form>
+{% endblock %}
+

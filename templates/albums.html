@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for a in albums %}
+            <h3>{{a.name}} {{a.num_stars}}</h3>
+            {{a.artist}} <br/>
+        {% endfor %}
+    <br>
+    <form action="/add_album" method="get">
+
+        <input type="submit" value="Add new album">
+    </form>
+{% endblock %}
+
